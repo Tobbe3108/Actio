@@ -8,8 +8,8 @@ namespace Actio.Common.Services.Builders
 {
     public class BusBuilder : BuilderBase
     {
-        private readonly IWebHost _webHost;
         private readonly IBusClient _bus;
+        private readonly IWebHost _webHost;
 
         public BusBuilder(IWebHost webHost, IBusClient bus)
         {
@@ -37,6 +37,5 @@ namespace Actio.Common.Services.Builders
         {
             return new ServiceHost(_webHost);
         }
-
     }
 }

@@ -5,13 +5,8 @@ namespace Actio.Common.Events.Rejected
 {
     public class CreateActivityRejected : IRejectedEvent
     {
-        public Guid Id { get; set; }
-        public string Reason { get; }
-        public string Code { get; }
-
         protected CreateActivityRejected()
         {
-
         }
 
         public CreateActivityRejected(Guid id, string reason, string code)
@@ -20,5 +15,9 @@ namespace Actio.Common.Events.Rejected
             Reason = reason;
             Code = code;
         }
+
+        public Guid Id { get; set; }
+        public string Reason { get; }
+        public string Code { get; }
     }
 }

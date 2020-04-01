@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using Actio.Common.Commands.Interfaces;
+﻿using Actio.Common.Commands.Interfaces;
 
 namespace Actio.Common.Commands
 {

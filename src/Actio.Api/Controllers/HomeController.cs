@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace Actio.Api.Controllers
 {
@@ -11,6 +6,9 @@ namespace Actio.Api.Controllers
     public class HomeController : Controller
     {
         [HttpGet("")]
-        public IActionResult Get() => Content("Hello from Actio Api");
+        public IActionResult Get()
+        {
+            return Content("Hello from Actio Api");
+        }
     }
 }

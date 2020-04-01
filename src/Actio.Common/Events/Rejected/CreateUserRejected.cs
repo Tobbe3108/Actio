@@ -4,13 +4,8 @@ namespace Actio.Common.Events.Rejected
 {
     public class CreateUserRejected : IRejectedEvent
     {
-        public string Email { get; set; }
-        public string Reason { get; }
-        public string Code { get; }
-
         protected CreateUserRejected()
         {
-
         }
 
         public CreateUserRejected(string email, string reason, string code)
@@ -19,5 +14,9 @@ namespace Actio.Common.Events.Rejected
             Reason = reason;
             Code = code;
         }
+
+        public string Email { get; set; }
+        public string Reason { get; }
+        public string Code { get; }
     }
 }

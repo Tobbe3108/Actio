@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Actio.Common.Services.Builders;
 using Microsoft.AspNetCore;
@@ -19,7 +16,10 @@ namespace Actio.Common.Services
             _webHost = webHost;
         }
 
-        public async Task Run() => await _webHost.RunAsync();
+        public async Task Run()
+        {
+            await _webHost.RunAsync();
+        }
 
         public static HostBuilder Create<TStartup>(string[] args) where TStartup : class
         {

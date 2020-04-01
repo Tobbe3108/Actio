@@ -15,7 +15,7 @@ namespace Actio.Common.Services.Builders
 
         public BusBuilder UseRabbitMQ()
         {
-            _bus = (IBusClient)_webHost.Services.GetService(typeof(IBusClient));
+            _bus = (IBusClient) _webHost.Services.GetService(typeof(IBusClient));
 
             return new BusBuilder(_webHost, _bus);
         }

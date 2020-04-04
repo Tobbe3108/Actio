@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Actio.Common.Exceptions;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace Actio.Services.Activities.Domain.Models
 {
@@ -20,7 +21,8 @@ namespace Actio.Services.Activities.Domain.Models
         {
         }
 
-        public Activity(Guid id, Category category, Guid userId, string name, string description, DateTime createdAt)
+        public Activity(Guid id, Category category, Guid userId, string name, string description,
+            DateTime createdAt)
         {
             if (string.IsNullOrWhiteSpace(name))
                 throw new ActioException("empty_activity_name", $"Activity name cannot be empty");

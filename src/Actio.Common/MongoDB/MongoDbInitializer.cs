@@ -13,7 +13,6 @@ namespace Actio.Common.MongoDB
     {
         private readonly IMongoDatabase _database;
         private readonly IDatabaseSeeder _seeder;
-        private readonly IOptions<MongoDbOptions> _options;
         private readonly bool _seed;
         private bool _initialized;
 

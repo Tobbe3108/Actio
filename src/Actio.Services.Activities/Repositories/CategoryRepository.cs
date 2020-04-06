@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Actio.Services.Activities.Domain.Models;
 using Actio.Services.Activities.Domain.Repositories;
@@ -19,6 +16,8 @@ namespace Actio.Services.Activities.Repositories
             _database = database;
         }
 
+        private IMongoCollection<Category> Collection => _database.GetCollection<Category>("Categories");
+
         public async Task AddAsync(Category category)
         {
             await Collection.InsertOneAsync(category);
@@ -33,7 +32,5 @@ namespace Actio.Services.Activities.Repositories
         {
             return await Collection.AsQueryable().ToListAsync();
         }
-
-        private IMongoCollection<Category> Collection => _database.GetCollection<Category>("Categories");
     }
 }

@@ -13,8 +13,8 @@ namespace Actio.Services.Activities.Handlers
 {
     public class CreateActivityHandler : ICommandHandler<CreateActivity>
     {
-        private readonly IBusClient _busClient;
         private readonly IActivityService _activityService;
+        private readonly IBusClient _busClient;
         private readonly ILogger _logger;
 
         public CreateActivityHandler(IBusClient busClient, IActivityService activityService,

@@ -6,7 +6,7 @@ using Actio.Services.Activities.Domain.Repositories;
 
 namespace Actio.Services.Activities.Services
 {
-    internal class ActivityService : IActivityService
+    public class ActivityService : IActivityService
     {
         private readonly IActivityRepository _activityRepository;
         private readonly ICategoryRepository _categoryRepository;

@@ -1,3 +1,4 @@
+using Actio.Common.Auth;
 using Actio.Common.Commands;
 using Actio.Common.Commands.Interfaces;
 using Actio.Common.MongoDB;
@@ -27,6 +28,7 @@ namespace Actio.Services.Identity
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddJwt(Configuration);
             services.AddControllers();
             services.AddMongoDb(Configuration);
             services.AddRabbitMq(Configuration);

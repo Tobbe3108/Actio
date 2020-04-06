@@ -1,6 +1,9 @@
 using Actio.Api.Handlers;
+using Actio.Api.Repositories;
+using Actio.Common.Auth;
 using Actio.Common.Events;
 using Actio.Common.Events.Interfaces;
+using Actio.Common.MongoDB;
 using Actio.Common.RabbitMQ;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -22,9 +25,12 @@ namespace Actio.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddJwt(Configuration);
             services.AddControllers();
+            services.AddMongoDb(Configuration);
             services.AddRabbitMq(Configuration);
             services.AddScoped<IEventHandler<ActivityCreated>, ActivityCreatedHandler>();
+            services.AddScoped<IActivityRepository, ActivityRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

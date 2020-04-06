@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Actio.Common.Exceptions
 {
     public class ActioException : Exception
     {
-        public string Code { get; }
-
         public ActioException()
         {
         }
@@ -41,5 +35,7 @@ namespace Actio.Common.Exceptions
         public ActioException(string message, Exception innerException) : base(message, innerException)
         {
         }
+
+        public string Code { get; }
     }
 }

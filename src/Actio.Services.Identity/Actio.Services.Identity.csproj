@@ -8,9 +8,5 @@
     <ProjectReference Include="..\Actio.Common\Actio.Common.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 
 </Project>

@@ -2,7 +2,6 @@ using Actio.Common.Commands;
 using Actio.Common.Commands.Interfaces;
 using Actio.Common.MongoDB;
 using Actio.Common.RabbitMQ;
-using Actio.Services.Activities.Domain.Models;
 using Actio.Services.Activities.Domain.Repositories;
 using Actio.Services.Activities.Handlers;
 using Actio.Services.Activities.Repositories;
@@ -12,7 +11,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using MongoDB.Bson.Serialization;
 
 namespace Actio.Services.Activities
 {
